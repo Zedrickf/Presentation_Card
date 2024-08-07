@@ -11,31 +11,25 @@
 }
 
 :root {
-  --greendark: #00eeff;
-  --greenlight: #eeb600;
-  --bluebody: #003135;
+  --greendark: #00c5d3;
+  --greenlight: #ffc504;
+  --bluebody: #012131;
+  /* --bluebody: #181a1b; */
   --bluehover: #024950;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  background-color: var(--bluebody);
-  display: flex;
-  flex-direction: column;
 }
 
 /*-----HEADER-----*/
 .card__header {
-  /* border: 2.5px solid var(--greenlight); */
+  border: 2px solid var(--greenlight);
   width: 100%;
-  height: 4.5em;
+  height: 4.5rem;
+  margin-bottom: 3.5%;
   display: flex;
   align-items: center;
 }
 
 .card__header__div {
-  /* border: 2px dotted red; */
+  border: 2px dotted red;
   margin: 0 4rem;
   display: flex;
   gap: 4.5em;
@@ -51,20 +45,27 @@ html, body {
 
 
 /*-----MAIN BODY-----*/
+.card {
+  width: 100%;
+  background-color: var(--bluebody);
+  display: flex;
+  flex-direction: column;
+}
+
 .card__main {
-  /* border: 5px dotted rgb(179, 25, 25); */
+  border: 2px dotted rgb(179, 25, 25);
   color: white;
   width: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Permite que este elemento ocupe el espacio restante */
+  flex-grow: 1; 
   justify-content: center;
   align-items: center;
 }
 
 .card__main__section {
-  /* border: 5px solid blue; */
+  border: 2px solid blue;
   display: flex;
   width: 100%;
   padding: 0 3rem;
@@ -74,7 +75,7 @@ html, body {
 }
 
 .card__main__section__txtlink {
-  /* border: 2px dotted red; */
+  border: 2px dotted red;
   flex: 1 1 70%;
   display: flex;
   flex-direction: column;
@@ -96,7 +97,7 @@ html, body {
 }
 
 .card__main__section__txtlink__links {
-  /* border: 2px solid white; */
+  border: 2px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,11 +137,17 @@ html, body {
   width: 40vw;
   max-width: 320px;
   max-height: 450px;
-  aspect-ratio: 150/260;
+  aspect-ratio: auto 150/260;
   flex: 0 0 auto;
-  border: 5px dotted rgb(104, 174, 0);
+  border: 2px dotted rgb(104, 174, 0);
   background-color: rgba(0, 155, 103, 0.392);
   align-self: baseline;
+  filter: grayscale(100%);
+  transition: all .2s ease-in;
+}
+
+.card__main__section__image-emulation:hover {
+  filter:grayscale(0);
 }
 
 .card__main__section__image {
@@ -151,7 +158,7 @@ html, body {
   filter: blur(2px);
 }
 
-.card__main__section__image:hover {
+.card__main__section__image-emulation:hover > .card__main__section__image {
   filter: blur(0);
 }
 
@@ -161,11 +168,13 @@ html, body {
 /*-----FOOTER-----*/
 .card__footer {
   width: 100%;
-  height: 4em;
+  height: 4.5rem;
+  margin-top: 5%;
   background-color: var(--greendark);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: black;
 }
 
 .card__footer__p {
