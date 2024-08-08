@@ -14,7 +14,6 @@
   --greendark: #00c5d3;
   --greenlight: #ffc504;
   --bluebody: #012131;
-  /* --bluebody: #181a1b; */
   --bluehover: #024950;
 }
 
@@ -28,14 +27,14 @@
   align-items: center;
 }
 
-.card__header__div {
-  border: 2px dotted red;
+.card__nav {
   margin: 0 4rem;
   display: flex;
   gap: 4.5em;
 }
 
-.card__header__button {
+/* nav buttons */
+.card__nav-item {
   color: var(--greendark);
   font-size: 24px;
   font-weight: 600;
@@ -52,8 +51,7 @@
   flex-direction: column;
 }
 
-.card__main {
-  border: 2px dotted rgb(179, 25, 25);
+.card__content {
   color: white;
   width: 100%;
   padding: 1rem;
@@ -64,8 +62,7 @@
   align-items: center;
 }
 
-.card__main__section {
-  border: 2px solid blue;
+.card__content-section {
   display: flex;
   width: 100%;
   padding: 0 3rem;
@@ -74,43 +71,43 @@
   gap: 5.5rem;
 }
 
-.card__main__section__txtlink {
-  border: 2px dotted red;
+.card__content-section__info {
   flex: 1 1 70%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 55px;
 }
 
-.card__main__section__txtlink__tittle {
+/* main title of the page */
+.card__content-section__info-title {
   font-size: 2.4em;
   font-family: "Krona One", sans-serif;
 }
 
-.card__main__section__txtlink strong {
+.card__content-section__info-title strong {
   color: var(--greendark);
 }
 
-.card__main__section__txtlink p, a {
+.card__content-section__info p {
   font-size: 1.5em;
   font-family: "Montserrat", sans-serif;
 }
 
-.card__main__section__txtlink__links {
-  border: 2px solid white;
+.card__content-section__div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
 }
 
-.card__main__section__txtlink__links__h2 {
+.card__content-section__div-title {
   font-family: "Krona One", sans-serif;
   font-size: 24px;
   font-weight: 400;
 }
 
-.card__main__section__txtlink__button {
+/* button of the web sites */
+.card__content-section__div__link {
   border: 2.2px solid var(--greenlight);
   width: 16.5em;
   padding: 20px 0;
@@ -122,43 +119,45 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
 }
 
-.card__main__section__txtlink__button:hover {
+.card__content-section__div__link:hover {
   background-color: var(--bluehover);
   transform: translate(0, -0.05em);
 }
 
-.card__main__section__txtlink__button:active {
+.card__content-section__div__link:active {
   transform: translate(0, 0.05em);
 }
 
-.card__main__section__image-emulation {
+/* image container */
+.card__image-emulation {
   width: 40vw;
   max-width: 320px;
   max-height: 450px;
   aspect-ratio: auto 150/260;
-  flex: 0 0 auto;
   border: 2px dotted rgb(104, 174, 0);
   background-color: rgba(0, 155, 103, 0.392);
   align-self: baseline;
   filter: grayscale(100%);
-  transition: all .2s ease-in;
+  transition: filter .2s ease-in;
 }
 
-.card__main__section__image-emulation:hover {
-  filter:grayscale(0);
+.card__image-emulation:hover {
+  filter: grayscale(0);
 }
 
-.card__main__section__image {
+.card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all .2s ease-in;
+  transition: filter .2s ease-in;
   filter: blur(2px);
 }
 
-.card__main__section__image-emulation:hover > .card__main__section__image {
+.card__image-emulation:hover > .card__image {
   filter: blur(0);
 }
 
@@ -177,9 +176,15 @@
   color: black;
 }
 
-.card__footer__p {
+.card__footer-text {
   font-size: 24px;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
 }
 /*-----FOOTER-----*/
+
+@media (min-width: 1500px) {
+  body {
+    height: 100vh;
+  }
+}
