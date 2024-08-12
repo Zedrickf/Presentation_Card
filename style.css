@@ -19,10 +19,9 @@
 
 /*-----HEADER-----*/
 .card__header {
-  border: 2px solid var(--greenlight);
   width: 100%;
   height: 4.5rem;
-  margin-bottom: 3.5%;
+  margin: 1.5% 3.5%;
   display: flex;
   align-items: center;
 }
@@ -31,6 +30,7 @@
   margin: 0 4rem;
   display: flex;
   gap: 4.5em;
+  width: 100%;
 }
 
 /* nav buttons */
@@ -39,6 +39,8 @@
   font-size: 24px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  padding: 1% 5%;
+  border: 2px solid var(--greenlight);
 }
 /*-----HEADER-----*/
 
@@ -183,7 +185,7 @@
 }
 /*-----FOOTER-----*/
 
-@media (min-width: 1400px) {
+@media (min-width: 1350px) {
   body {
     height: 100vh;
   }
